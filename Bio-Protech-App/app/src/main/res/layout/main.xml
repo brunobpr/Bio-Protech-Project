@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#000000"
+    android:fitsSystemWindows="true"
+    tools:context="com.bioprotech.MainActivity">
+
+
+    <FrameLayout
+        android:id="@+id/clickableArea"
+        android:layout_width="250dp"
+        android:layout_height="fill_parent"
+        android:elevation="5dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/menu">
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/slider"
+        android:layout_width="314dp"
+        android:layout_height="361dp"
+        android:layout_marginBottom="104dp"
+
+        android:src="@drawable/slider3"
+        app:layout_constraintBottom_toTopOf="@+id/rssival"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/menuButton"
+        android:layout_width="250dp"
+        android:layout_height="180dp"
+        android:contentDescription="@string/scan"
+        android:src="@drawable/logodisconnected"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/menu"
+        android:layout_width="190dp"
+        android:layout_height="fill_parent"
+        android:background="#E9E3E3"
+        android:elevation="5dp"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/homeButton"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/button_home" />
+
+        <ImageView
+            android:id="@+id/bluetootButton"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/button_bluetoothconnect" />
+
+        <ImageView
+            android:id="@+id/graphButton"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/cardview_compat_inset_shadow"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/button_graph" />
+
+        <ImageView
+            android:id="@+id/settingButton"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/button_settings" />
+
+        <ImageView
+            android:id="@+id/infoButton"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/button_info" />
+    </LinearLayout>
+
+    <SeekBar
+        android:id="@+id/sliderBar"
+        style="@style/Widget.AppCompat.SeekBar"
+        android:layout_width="375dp"
+        android:layout_height="450dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="62dp"
+        android:backgroundTint="#00FFFFFF"
+        android:elevation="10dp"
+        android:fadingEdgeLength="10dp"
+        android:foregroundTint="#00FFFFFF"
+        android:indeterminateTint="#00FFFFFF"
+        android:max="180"
+        android:min="20"
+        android:orientation="vertical"
+        android:outlineAmbientShadowColor="#160101"
+        android:outlineProvider="none"
+        android:outlineSpotShadowColor="#160101"
+        android:progress="20"
+        android:progressBackgroundTint="#00FFFFFF"
+        android:progressTint="#00FFFFFF"
+        android:rotation="270"
+        android:secondaryProgressTint="#00FFFFFF"
+        android:thumbTint="#00FFFFFF"
+        android:tickMarkTint="#00FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/rssival"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/frequencyTF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="80Hz"
+        android:textColor="#00BCD4"
+        android:textSize="60sp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menuButton" />
+
+    <TextView
+        android:id="@+id/startStop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:background="#08FFFFFF"
+        android:backgroundTint="#2AFFFFFF"
+        android:padding="20px"
+        android:text="START"
+        android:textColor="#00BCD4"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toStartOf="@+id/sliderBar"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/sliderBar"
+        app:layout_constraintTop_toBottomOf="@+id/slider" />
+
+    <TextView
+        android:id="@+id/rssival"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="_"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/deviceName" />
+
+    <TextView
+        android:id="@+id/deviceName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="315dp"
+        android:text="@string/no_device"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,139 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ap="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    class="com.bioprotech.GraphActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="horizontal"
+    tools:context="com.bioprotech.GraphActivity">
+
+    <FrameLayout
+        android:id="@+id/clickableArea"
+        android:layout_width="277dp"
+        android:layout_height="823dp"
+        android:elevation="5dp"
+        android:visibility="visible"
+        ap:layout_constraintBottom_toBottomOf="parent"
+        ap:layout_constraintStart_toEndOf="@+id/menu">
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/menuButton"
+        android:layout_width="250dp"
+        android:layout_height="180dp"
+        android:contentDescription="@string/scan"
+        android:src="@drawable/logodisconnected"
+        ap:layout_constraintEnd_toEndOf="parent"
+        ap:layout_constraintStart_toStartOf="parent"
+        ap:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/menu"
+        android:layout_width="190dp"
+        android:layout_height="fill_parent"
+        android:background="#E9E3E3"
+        android:elevation="5dp"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        ap:layout_constraintStart_toStartOf="parent"
+        ap:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/homeButton"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/button_home" />
+
+        <ImageView
+            android:id="@+id/bluetootButton"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/button_bluetoothconnect" />
+
+        <ImageView
+            android:id="@+id/graphButton"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/cardview_compat_inset_shadow"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/button_graph" />
+
+        <ImageView
+            android:id="@+id/settingButton"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/button_settings" />
+
+        <ImageView
+            android:id="@+id/infoButton"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/button_info" />
+
+    </LinearLayout>
+
+    <Switch
+        android:id="@+id/saveSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textSize="24sp"
+        ap:layout_constraintStart_toEndOf="@id/saveTxt"
+        ap:layout_constraintTop_toBottomOf="@+id/frequencyTF" />
+
+    <TextView
+        android:id="@+id/saveTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="31dp"
+
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="6dp"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/save"
+        android:textColor="#F3F3F3"
+        android:textSize="24sp"
+        ap:layout_constraintStart_toStartOf="parent"
+        ap:layout_constraintTop_toBottomOf="@id/frequencyTF" />
+
+    <TextView
+        android:id="@+id/frequencyTF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="28dp"
+        android:fontFamily="sans-serif-black"
+        android:textColor="#F3F3F3"
+        android:textSize="24sp"
+        ap:layout_constraintStart_toStartOf="parent"
+        ap:layout_constraintTop_toBottomOf="@+id/plot" />
+
+    <com.androidplot.xy.XYPlot
+        android:id="@+id/plot"
+        style="@style/APDefacto.Dark"
+        android:layout_width="402dp"
+        android:layout_height="510dp"
+        android:layout_marginEnd="16dp"
+        ap:layout_constraintEnd_toEndOf="parent"
+        ap:layout_constraintHorizontal_bias="0.956"
+        ap:layout_constraintStart_toEndOf="@+id/menu"
+        ap:layout_constraintTop_toBottomOf="@id/menuButton"
+        ap:lineLabelRotationBottom="-45"
+        ap:lineLabels="left|bottom"
+        ap:rangeTitle="range"
+        ap:title="Tremor Analyses" />
+
+
+</android.support.constraint.ConstraintLayout>

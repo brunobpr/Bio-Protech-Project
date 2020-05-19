@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Bio Protech</string>
+    <string name="no_device">Device not available</string>
+    <string name="select_device">Select a device</string>
+    <string name="popup_title">Quit Bio Protech</string>
+    <string name="popup_message">Do you want to quit this application?</string>
+    <string name="popup_yes">YES</string>
+    <string name="popup_no">NO</string>
+    <string name="scan">Scan</string>
+    <string name="save">Save</string>
+</resources>
