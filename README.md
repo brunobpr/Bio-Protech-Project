@@ -14,5 +14,6 @@ Therefore Bio Protech proposes the development of a smart wearable device for re
 
 ## Park Med and Bio Protech App
 
-![](https://scontent-dub4-1.xx.fbcdn.net/v/t1.15752-9/p1080x2048/98204060_273210540534560_9105340717743472640_n.jpg?_nc_cat=107&_nc_sid=b96e70&_nc_ohc=AbLTxaEoBYQAX-lryzk&_nc_ht=scontent-dub4-1.xx&tp=6&oh=47b1cf679c80be0f3aa16c70a1138cbd&oe=5F8DDCB6)
+![Prototype](img-1.jpg)
+![User Interface](img-2.png)
 
